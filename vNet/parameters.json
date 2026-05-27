@@ -1,0 +1,211 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "southafricanorth"
+        },
+        "extendedLocation": {
+            "value": {}
+        },
+        "virtualNetworkName": {
+            "value": "vnet-prod-01"
+        },
+        "tagsByResource": {
+            "value": {
+                "Microsoft.Network/virtualNetworks": {
+                    "environment": "production"
+                },
+                "Microsoft.Network/ddosProtectionPlans": {
+                    "environment": "production"
+                },
+                "Microsoft.Network/publicIPAddresses": {
+                    "environment": "production"
+                },
+                "Microsoft.Network/azureFirewalls": {
+                    "environment": "production"
+                },
+                "Microsoft.Network/bastionHosts": {
+                    "environment": "production"
+                },
+                "Microsoft.Network/natGateways": {
+                    "environment": "production"
+                },
+                "Microsoft.Network/publicIPPrefixes": {
+                    "environment": "production"
+                },
+                "Microsoft.Network/networkSecurityGroups": {
+                    "environment": "production"
+                }
+            }
+        },
+        "addressSpace": {
+            "value": {
+                "addressPrefixes": [
+                    "10.0.0.0/16"
+                ]
+            }
+        },
+        "summarizedGatewayPrefixes": {
+            "value": {
+                "addressPrefixes": []
+            }
+        },
+        "encryptionEnabled": {
+            "value": false
+        },
+        "encryptionEnforcement": {
+            "value": "AllowUnencrypted"
+        },
+        "subnets": {
+            "value": [
+                {
+                    "name": "default",
+                    "properties": {
+                        "addressPrefixes": [
+                            "10.0.0.0/24"
+                        ],
+                        "defaultOutboundAccess": false
+                    }
+                }
+            ]
+        },
+        "ddosProtectionPlanEnabled": {
+            "value": false
+        },
+        "firewallEnabled": {
+            "value": false
+        },
+        "bastionEnabled": {
+            "value": false
+        },
+        "ddosProtectionPlanIsNew": {
+            "value": false
+        },
+        "firewallPublicIpAddressIsNew": {
+            "value": false
+        },
+        "firewallPolicyIsNew": {
+            "value": false
+        },
+        "firewallPolicyManagementPublicIPAddressIsNew": {
+            "value": false
+        },
+        "bastionPublicIpAddressIsNew": {
+            "value": false
+        },
+        "bastionNsgIsNew": {
+            "value": false
+        },
+        "ddosProtectionPlanName": {
+            "value": "##ddos-protection-plan-name-not-set##"
+        },
+        "ddosProtectionPlanId": {
+            "value": "##ddos-protection-plan-id-not-set##"
+        },
+        "firewallName": {
+            "value": "##firewall-name-not-set##"
+        },
+        "firewallSkuTier": {
+            "value": "Standard"
+        },
+        "firewallPublicIpAddressName": {
+            "value": "##firewall-public-ip-name-not-set##"
+        },
+        "firewallPublicIpAddressId": {
+            "value": ""
+        },
+        "firewallPublicIPAddressServiceTag": {
+            "value": ""
+        },
+        "firewallPolicyName": {
+            "value": "##firewall-policy-name-not-set##"
+        },
+        "firewallPolicyId": {
+            "value": "##firewall-policy-id-not-set##"
+        },
+        "firewallPolicyTier": {
+            "value": "Standard"
+        },
+        "firewallPolicyManagementPublicIPAddressName": {
+            "value": "##firewall-policy-management-public-i-p-address-name-not-set##"
+        },
+        "firewallPolicyManagementPublicIPAddressId": {
+            "value": "##firewall-policy-management-public-i-p-address-id-not-set##"
+        },
+        "bastionName": {
+            "value": "##bastion-name-not-set##"
+        },
+        "bastionPublicIpAddressName": {
+            "value": "##bastion-public-ip-address-name-not-set##"
+        },
+        "bastionPublicIPAddressId": {
+            "value": ""
+        },
+        "bastionPublicIpAddressServiceTag": {
+            "value": ""
+        },
+        "bastionNsgName": {
+            "value": "##bastion-nsg-name-not-set##"
+        },
+        "bastionNsgId": {
+            "value": "##bastion-nsg-id-not-set##"
+        },
+        "natGatewaysWithNewPublicIpAddress": {
+            "value": []
+        },
+        "natGatewaysWithoutNewPublicIpAddress": {
+            "value": []
+        },
+        "natGatewayPublicIpAddressesNew": {
+            "value": []
+        },
+        "networkSecurityGroupsNew": {
+            "value": []
+        },
+        "ipv6Enabled": {
+            "value": false
+        },
+        "subnetCount": {
+            "value": 1
+        },
+        "addressSpaceStartingAddressChanged": {
+            "value": false
+        },
+        "addressSpaceAddressSizeChanged": {
+            "value": false
+        },
+        "defaultSubnetChanged": {
+            "value": true
+        },
+        "subnetsInfo": {
+            "value": [
+                {
+                    "cidr": "10.0.0.0/24",
+                    "name": "Default",
+                    "natGw": "none",
+                    "nsg": "none",
+                    "udr": "none"
+                }
+            ]
+        },
+        "ipamPools": {
+            "value": []
+        },
+        "networkManager": {
+            "value": {}
+        },
+        "createNetworkManager": {
+            "value": false
+        },
+        "networkManagerName": {
+            "value": "##network-manager-name-not-set##"
+        },
+        "avnmResourceGroup": {
+            "value": "##avnm-resource-group-not-set##"
+        },
+        "avnmSubscriptionId": {
+            "value": "##avnm-subscription-id-not-set##"
+        }
+    }
+}
